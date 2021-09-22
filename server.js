@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 const morgan = require('morgan');
 const jwt = require('jsonwebtoken');
 
-const url = 'mongodb://127.0.0.1:27017/assessment-4';
+const url = 'mongodb+srv://heroku-save-tree:jKZz29mBxHIePZx3@FreeTree.n9z04.mongodb.net/sample_mflix?retryWrites=true&w=majority';
 // starting mongoose
 mongoose
 	.connect(url, { useNewUrlParser: true })
