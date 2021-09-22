@@ -4,7 +4,6 @@ const Comment = require("../models/Comments")
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const { ApolloError } = require("apollo-server-errors");
-require('dotenv').config();
 
 const generateToken = (user) => {
   // Generate token is used to take a username and create a JWT token to assist user auth.
@@ -12,7 +11,7 @@ const generateToken = (user) => {
     if (isMatch) {
         const payload = { username: user.username };
         const options = { expiresIn: '10d' };
-        const secret = process.env.JWT_SECRET;
+        const secret = `286752148970c89b8c1ef0528dcae3053ac5f5cafc242afff26826b0d19afc77`;
         const token = {username: user.username , jwt: jwt.sign(payload, secret, options)};
         return token;
     } else {

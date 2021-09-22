@@ -1,5 +1,3 @@
-require('dotenv').config();
-
 const express = require('express');
 const { ApolloServer } = require('apollo-server-express');
 const { typeDefs } = require('./Schema/TypeDefs');
@@ -8,7 +6,7 @@ const mongoose = require('mongoose');
 const morgan = require('morgan');
 const jwt = require('jsonwebtoken');
 
-const url = process.env.DATABASE_URL;
+const url = 'mongodb://127.0.0.1:27017/assessment-4';
 // starting mongoose
 mongoose
 	.connect(url, { useNewUrlParser: true })
